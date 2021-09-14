@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-          echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
             docker push $IMAGE_NAME:latest
 workflows:
   version: 2
